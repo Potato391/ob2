@@ -5,6 +5,39 @@
 
     
     <html lang="en"><head>
+      <script>
+        // Define the correct password
+        var correctPassword = "Ehabiscool";
+
+        // Function to prompt for password
+        function checkPassword() {
+            // Prompt the user for a password
+            var password = prompt("Unauthorized access to this admin webpage is strictly prohibited. If you are not authorized to be here, exit immediately. Unauthorized access may result in legal action.Do not attempt to enter passwords or access any restricted areas of this admin webpage. Unauthorized access is a violation of security protocols and may result in severe consequences. Leave immediately if you are not authorized.");
+
+            // Check if the entered password matches the correct password
+            if (password === "test") {
+                // If correct, redirect to the site
+              console.log("hi")
+            } else {
+                // If incorrect, show an alert and prompt again
+                alert("Incorrect password. Please try again.");
+                checkPassword();
+            }
+        }
+    </script>
+    <script>
+      function handleKeyPress(event) {
+          if (event.key === "Enter") {
+              document.body.style.display = "block";
+          
+          }
+      }
+  </script>
+  <style>
+      body {
+          display: none;
+      }
+  </style>
       <script src="uv/uv.bundle.js" defer></script>
       <script src="uv/uv.config.js" defer></script>
       <script src="register-sw.js" defer></script>
@@ -244,7 +277,7 @@
     }
   };
   </style></head>
-  <body>
+  <body onload="checkPassword()">
     <div class="shell" id="shell" style="border-radius: 0px 0px 0px 0px;">
       <a href="/" style="display: flex; justify-content: center; align-items: center;"><svg xmlns="http://www.w3.org/2000/svg" class="appI" id="appsL" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
           <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
