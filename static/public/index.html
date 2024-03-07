@@ -7,15 +7,14 @@
     <html lang="en"><head>
       <script>
         // Define the correct password
-        var correctPassword = "Ehabiscool";
-
+   
         // Function to prompt for password
         function checkPassword() {
             // Prompt the user for a password
             var password = prompt("Unauthorized access to this admin webpage is strictly prohibited. If you are not authorized to be here, exit immediately. Unauthorized access may result in legal action.Do not attempt to enter passwords or access any restricted areas of this admin webpage. Unauthorized access is a violation of security protocols and may result in severe consequences. Leave immediately if you are not authorized.");
 
             // Check if the entered password matches the correct password
-            if (password === "test") {
+            if (password === "notaproxy") {
                 // If correct, redirect to the site
               console.log("hi")
             } else {
@@ -26,16 +25,18 @@
         }
     </script>
     <script>
-      function handleKeyPress(event) {
-          if (event.key === "Enter") {
-              document.body.style.display = "block";
-          
-          }
-      }
+        function handleKeyPress(event) {
+            if (event.key === ";") {
+                document.querySelectorAll('*').forEach(function(node) {
+                    node.style.visibility = "visible";
+                });
+            }
+        }
+        document.addEventListener('keypress', handleKeyPress);
   </script>
   <style>
-      body {
-          display: none;
+      * {
+          visibility: hidden;
       }
   </style>
       <script src="uv/uv.bundle.js" defer></script>
