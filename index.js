@@ -11,7 +11,7 @@ const __dirname = process.cwd()
 const server = http.createServer()
 const app = express(server)
 const bareServer = createBareServer('/2/o/')
-const PORT = process.env.PORT || 8080
+const PORT = process.env.PORT || 8000
 
 if (config.challenge) {
   console.log('Password protection is enabled. Usernames are: ' + Object.keys(config.users))
